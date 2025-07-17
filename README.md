@@ -1,6 +1,6 @@
 # Project Structure
 
-<img width="1302" height="954" alt="image" src="https://github.com/user-attachments/assets/944cbc0e-e105-473e-991c-b8d4859bd178" />
+<img width="600" height="800" alt="image" src="https://github.com/user-attachments/assets/944cbc0e-e105-473e-991c-b8d4859bd178" />
 
 
 
