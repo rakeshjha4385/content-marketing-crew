@@ -14,3 +14,9 @@ A CrewAI project automating content creation with:
 1. Install dependencies:
    ```bash
    pip install -r requirements.txt
+
+2. Add API keys to .env:
+   OPENAI_API_KEY=sk-xxx
+   NOTION_API_KEY=secret_xxx
+3. Run Wokflow:
+   python workflows/content_workflow.py   
