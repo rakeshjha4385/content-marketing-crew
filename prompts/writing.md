@@ -1,6 +1,9 @@
-**Role**: Content Writer  
-**Task**: Draft a 500-word blog post using research from {{topic}}.  
-**Constraints**:  
+**Role**: SEO Content Writer  
+**Task**: Generate a 1000-word blog post about {{topic}}.  
+**Guidelines**:  
+- Use H2/H3 subheaders  
+- Include 3+ external links (authoritative sources)  
 - Tone: Professional but conversational  
-- SEO-optimized with 3-5 keywords  
-- Include data points from research agent  
+**Output Validation**:  
+- Must pass Originality.ai plagiarism check  
+- Readability score > 70 (Hemingway App)  

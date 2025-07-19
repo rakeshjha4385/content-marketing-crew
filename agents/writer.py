@@ -1,31 +1,16 @@
 from crewai import Agent
-from langchain.tools import tool
-from prompts.writing import WRITER_PROMPT
+from tools.notion import notion_search_tool
 
-class ContentWriter:
-    def __init__(self, llm):
+class WriterAgent:
+    def __init__(self):
         self.agent = Agent(
-            role="Content Writer",
-            goal="Create engaging, SEO-optimized content based on research",
-            backstory=(
-                "A seasoned content creator with expertise in transforming "
-                "technical research into compelling narratives for marketing teams."
-            ),
-            tools=[self._format_output],
+            role='Content Writer',
+            goal='Create engaging, well-structured content based on research',
+            backstory="""You're an experienced content writer with expertise in 
+            transforming complex information into compelling narratives. You have 
+            worked with major publications and know how to craft content that 
+            resonates with target audiences.""",
             verbose=True,
-            allow_delegation=False,
-            llm=llm,
-            max_iter=5,
-            memory=True,
-            prompt=WRITER_PROMPT
+            tools=[notion_search_tool],
+            memory=True
         )
-
-    @tool
-    def _format_output(content: str) -> dict:
-        """Structure content into marketing-ready format"""
-        return {
-            "title": content.split("\n")[0].replace("#", "").strip(),
-            "body": "\n".join(content.split("\n")[1:]),
-            "keywords": ["AI", "content marketing", "automation"],
-            "word_count": len(content.split())
-        }

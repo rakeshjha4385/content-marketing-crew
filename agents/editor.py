@@ -1,35 +1,17 @@
 from crewai import Agent
-from langchain.tools import tool
-from prompts.editing import EDITOR_PROMPT
+from tools.notion import notion_search_tool
+from tools.slack import slack_notification_tool
 
-class ContentEditor:
-    def __init__(self, llm):
+class EditorAgent:
+    def __init__(self):
         self.agent = Agent(
-            role="Content Editor",
-            goal="Ensure content quality, tone, and brand consistency",
-            backstory=(
-                "A meticulous editor with 10+ years experience in tech content, "
-                "known for sharpening messaging while preserving author voice."
-            ),
-            tools=[self._check_quality, self._suggest_improvements],
+            role='Senior Editor',
+            goal='Ensure all content meets quality standards and brand voice',
+            backstory="""You're a meticulous editor with 8 years of experience at major publishing houses.
+            You have an eagle eye for detail and can improve any piece of writing while maintaining
+            the author's original voice and intent. You specialize in SEO optimization and readability.""",
             verbose=True,
-            allow_delegation=True,
-            llm=llm,
+            tools=[notion_search_tool, slack_notification_tool],
             memory=True,
-            prompt=EDITOR_PROMPT
+            allow_delegation=False
         )
-
-    @tool
-    def _check_quality(content: dict) -> dict:
-        """Evaluate content against quality checklist"""
-        return {
-            "clarity_score": 0.9,
-            "seo_optimized": True,
-            "brand_voice_match": True,
-            "issues_found": []
-        }
-
-    @tool
-    def _suggest_improvements(content: dict) -> str:
-        """Generate specific improvement suggestions"""
-        return "Consider adding more data points from the research in section 2"

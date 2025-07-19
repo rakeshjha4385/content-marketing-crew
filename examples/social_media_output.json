@@ -1,0 +1,41 @@
+{
+    "workflow_id": "sm-20240615-001",
+    "topic": "Future of AI in Content Marketing",
+    "platforms": ["twitter", "linkedin"],
+    "posts": {
+      "twitter": [
+        {
+          "content": "The AI content revolution is here! 🚀 67% of marketers now use AI tools. Here's how it's changing the game: [thread] #AIContent #MarketingTech",
+          "hashtags": ["#AIContent", "#MarketingTech", "#AI"],
+          "character_count": 278,
+          "scheduled_time": "2024-06-15T10:00:00Z",
+          "status": "approved"
+        },
+        {
+          "content": "AI isn't replacing marketers - but marketers using AI are replacing those who don't. Here's why: [link] #FutureOfMarketing #DigitalTransformation",
+          "hashtags": ["#FutureOfMarketing", "#DigitalTransformation"],
+          "character_count": 269,
+          "scheduled_time": "2024-06-15T16:30:00Z",
+          "status": "approved"
+        }
+      ],
+      "linkedin": [
+        {
+          "content": "Our latest case study shows how AI content automation drove:\n\n• 3x more content output\n• 40% cost reduction\n• 22% higher engagement\n\nSee how we implemented CrewAI for these results: [link]\n\n#ContentMarketing #AI #MarketingAutomation",
+          "hashtags": ["#ContentMarketing", "#AI", "#MarketingAutomation"],
+          "character_count": 412,
+          "scheduled_time": "2024-06-15T11:15:00Z",
+          "status": "approved"
+        }
+      ]
+    },
+    "metrics": {
+      "estimated_reach": 125000,
+      "target_audience": "marketing professionals",
+      "utm_parameters": {
+        "source": "social_automation",
+        "medium": "social",
+        "campaign": "ai_content_2024"
+      }
+    }
+  }

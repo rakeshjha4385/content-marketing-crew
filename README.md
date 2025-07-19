@@ -4,19 +4,38 @@
 
 
 
-# AI Content Marketing Crew
+# Content Marketing Automation with CrewAI
 
-A CrewAI project automating content creation with:
-- Research → Writing → Editing → Publishing  
-- Integrations: OpenAI (GPT-4), Notion, Slack, n8n  
+This project implements a multi-agent system for automating content marketing workflows using CrewAI.
+
+## Features
+
+- Multi-agent collaboration for content creation
+- Integration with Notion, Slack, and n8n
+- Automated research, writing, editing, and publishing workflows
+- Memory and context management between agents
 
 ## Setup
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
 
-2. Add API keys to .env:
-   OPENAI_API_KEY=sk-xxx
-   NOTION_API_KEY=secret_xxx
-3. Run Wokflow:
-   python workflows/content_workflow.py   
+1. Clone the repository
+2. Install dependencies: `pip install -r requirements.txt`
+3. Create a `.env` file based on `.env.example`
+4. Run the main workflow: `python main.py`
+
+## Workflows
+
+1. **Blog Post Creation**
+   - Research → Writing → Editing → Publishing
+   
+2. **Social Media Content**
+   - Research → Content Creation → Approval → Scheduling
+
+3. **Newsletter Production**
+   - Content Collection → Curation → Design → Distribution
+
+## Testing
+
+Run tests with:
+```bash
+pytest tests/
+```
